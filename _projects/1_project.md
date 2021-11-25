@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Formation-Containment on Euler-Lagrange Systems
+description: Stability analysis of EU systems subject to saturation and delays
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: research 
 ---
 
 Every project has a beautiful feature showcase page.

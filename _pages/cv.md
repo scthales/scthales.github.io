@@ -1,8 +1,7 @@
 ---
 layout: page
-permalink: /assets/pdf/example_pdf.pdf
+permalink: /assets/pdf/cv_thales.pdf
 title: curriculum vitae
 description: 
 nav: true
 ---
-dd

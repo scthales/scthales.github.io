@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description:
-years: [1956, 1950, 1935, 1905]
+years: [In review, 2021, 2020, 2018, 2015, Thesis]
 nav: true
 ---
 

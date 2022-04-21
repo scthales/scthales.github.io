@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: publications
 description:
-years: [In review, 2021, 2020, 2018, 2015, Thesis]
+years: [In review, 2022, 2021, 2020, 2018, 2015, Thesis]
 nav: true
 ---
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Website</title>
+
+<!--
+  ============================================================
+  HOW TO EDIT THIS PAGE
+  ============================================================
+  You only need to change the text between the two lines marked
+  "START EDITING HERE" and "STOP EDITING HERE" below.
+
+  Quick guide:
+    # Title             -> the big course title (use once, at the top)
+    ## Section          -> a new section (automatically added to the menu)
+    ### Subheading      -> a smaller heading
+    **bold**   *italic*
+    [link text](https://example.com)
+    [email me](mailto:name@brown.edu)
+    ![](images/photo.jpg)   -> a picture (put the file in the "images" folder)
+    - item              -> a bullet point
+
+  Tables: one row per line, columns separated by |
+    | Date | Topic |
+    |------|-------|
+    | Jan 21 | Introduction |
+
+  Leave a blank line between paragraphs.
+  ============================================================
+-->
+
+<script type="text/markdown" id="content">
+<!-- ==================== START EDITING HERE ==================== -->
+
+# CSCI 1953D: Multi-Robot Coordination and Exploration
+Spring 2027
+
+## Overview
+
+This course introduces the principles and algorithms that enable teams of robots to work together to explore and map unknown environments. Topics include robot kinematics and sensing, localization, occupancy-grid mapping and SLAM, path planning, frontier-based exploration, consensus, and map merging. Weekly hands-on labs give students practical experience programming mobile robots in simulation and on physical hardware using ROS 2. The course culminates in a team final project in which students design, implement, and evaluate a coordinated multi-robot exploration and mapping system. Students should be both mathematically sophisticated and competent programmers.
+
+**Prerequisites:**  Need to take one course from each of these sets: 
+Robotics: (CSCI 1952D, CSCI 1952Z, OR ARTS 1550/ENGN 1550A) AND AI:(CSCI 0410, 1411, 1470, OR 2470)
+
+## Staff
+
+### Instructor
+
+![](images/instructor.jpg)
+**Nora Ayanina**
+Office: CIT XXX
+Office hours: [Day, time]
+[name@brown.edu](mailto:name@brown.edu)
+
+![](images/instructor.jpg)
+**Thales Costa Silva**
+Office: CIT XXX
+Office hours: [Day, time]
+[name@brown.edu](mailto:name@brown.edu)
+
+
+### Teaching Assistants
+
+![](images/ta1.jpg)
+**TA Name**
+Office hours: [Day, time, room]
+[ta@brown.edu](mailto:ta@brown.edu)
+
+![](images/ta2.jpg)
+**TA Name**
+Office hours: [Day, time, room]
+[ta@brown.edu](mailto:ta@brown.edu)
+
+## Schedule
+
+**Lectures:** [Days, time], CIT XXX
+
+| Date | Topic |
+|------|-------|
+| Jan 21 | Introduction |
+| Jan 26 | Topic |
+| Jan 28 | Topic |
+| Feb 16 | No class |
+| Mar 11 | Midterm |
+| Mar 23, 25 | Spring break |
+| Apr 22 | Last lecture |
+
+**Final exam:** [Date, time]
+
+## Assignments
+
+[Assignments description.]
+
+## Resources
+
+**Textbook:** [*Book Title*](https://example.com), Author(s).
+
+**Recommended:**
+
+- [*Book Title*](https://example.com), Author(s)
+- [*Book Title*](https://example.com), Author(s)
+
+<!-- ==================== STOP EDITING HERE ==================== -->
+</script>
+
+<style>
+  /* Brown University colors */
+  :root { --brown: #4E3629; --red: #C00404; }
+  body {
+    max-width: 800px; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+    font-family: Georgia, "Times New Roman", serif; line-height: 1.6; color: #222;
+  }
+  h1, h2 { color: var(--brown); }
+  h1 { margin-bottom: 0; }
+  h2 { margin-top: 2rem; border-bottom: 2px solid var(--red); padding-bottom: .2rem; }
+  a { color: var(--red); }
+  nav a { margin-right: 1rem; }
+  img { width: 90px; height: 90px; object-fit: cover; display: block; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
+</style>
+</head>
+<body>
+<main id="page"></main>
+
+<!-- Below this line: no need to edit. It turns the text above into the web page. -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script>
+  var text = document.getElementById('content').textContent;
+  var page = document.getElementById('page');
+  page.innerHTML = marked.parse(text, { breaks: true });
+
+  // Use the course title as the browser tab title
+  var h1 = page.querySelector('h1');
+  if (h1) document.title = h1.textContent;
+
+  // Build the menu automatically from the ## sections
+  var nav = document.createElement('nav');
+  page.querySelectorAll('h2').forEach(function (h) {
+    h.id = h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    var a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent;
+    nav.appendChild(a);
+  });
+  var firstSection = page.querySelector('h2');
+  if (firstSection) page.insertBefore(nav, firstSection);
+</script>
+</body>
+</html>
